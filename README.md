@@ -1,5 +1,11 @@
 # NavPal
 
+![Mobile App Preview](map.jpeg)
+
+[Frontend Repo](https://github.com/nepal80m/navpal-frontend)
+
+
+
 ## Team Members
 
 * Anish Dulal

@@ -271,7 +271,8 @@ def process_location_update(navigator, loc, flight_status, time_until_flight, tr
         )
         result = generate_text(prompt)
         if result:
-            print(f"LLM Instruction (Nepali): {result}\n")
+            pass
+            # print(f"LLM Instruction (Nepali): {result}\n")
         else:
             print("No LLM response.\n")
 

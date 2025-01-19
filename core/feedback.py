@@ -179,6 +179,7 @@ def feedback_beat():
             flight_data["time_until_flight"], 
             transcription_obj
         )
+        
 
         # base_path=settings.BASE_DIR
         print(result)
