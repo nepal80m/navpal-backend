@@ -96,10 +96,7 @@ class GPSViewSet(viewsets.ViewSet):
 
         recent_entries = LocationHistory.objects.order_by('-timestamp')[:2]
         recent_coords = [
-            {
-                "lat": entry.latitude,
-                "lng": entry.longitude,
-            }
+            (entry.latitude, entry.longitude)
             for entry in recent_entries
         ]
         cache.set("recent_coords", recent_coords, timeout=10)
