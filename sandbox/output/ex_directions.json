@@ -1,0 +1,96 @@
+[
+    {
+        "bounds": {
+            "northeast": {
+                "lat": 47.445187,
+                "lng": -122.2998291
+            },
+            "southwest": {
+                "lat": 47.4427576,
+                "lng": -122.3018207
+            }
+        },
+        "copyrights": "Map data \u00a92025",
+        "legs": [
+            {
+                "distance": {
+                    "text": "0.2 mi",
+                    "value": 353
+                },
+                "duration": {
+                    "text": "5 mins",
+                    "value": 281
+                },
+                "end_address": "Main Terminal, SeaTac, WA 98158, USA",
+                "end_location": {
+                    "lat": 47.445187,
+                    "lng": -122.2998291
+                },
+                "start_address": "17801 International Blvd, SeaTac, WA 98158, USA",
+                "start_location": {
+                    "lat": 47.4427576,
+                    "lng": -122.3010846
+                },
+                "steps": [
+                    {
+                        "distance": {
+                            "text": "46 ft",
+                            "value": 14
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 11
+                        },
+                        "end_location": {
+                            "lat": 47.4427961,
+                            "lng": -122.3010047
+                        },
+                        "html_instructions": "Head <b>northeast</b> toward <b>Departures Dr</b>",
+                        "polyline": {
+                            "points": "gdq`Hv|miVGO"
+                        },
+                        "start_location": {
+                            "lat": 47.4427576,
+                            "lng": -122.3010846
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "0.2 mi",
+                            "value": 339
+                        },
+                        "duration": {
+                            "text": "5 mins",
+                            "value": 270
+                        },
+                        "end_location": {
+                            "lat": 47.445187,
+                            "lng": -122.2998291
+                        },
+                        "html_instructions": "Turn <b>left</b> onto <b>Departures Dr</b><div style=\"font-size:0.9em\">Destination will be on the left</div>",
+                        "maneuver": "turn-left",
+                        "polyline": {
+                            "points": "odq`Hf|miVYj@U\\KXEHKJONIHIBGBi@FM?E?CAIAQIKUKBGICCKUOSIMQYEICEMe@MSACUSCEIMQYEIKQIMMSM]CEO["
+                        },
+                        "start_location": {
+                            "lat": 47.4427961,
+                            "lng": -122.3010047
+                        },
+                        "travel_mode": "WALKING"
+                    }
+                ],
+                "traffic_speed_entry": [],
+                "via_waypoint": []
+            }
+        ],
+        "overview_polyline": {
+            "points": "gdq`Hv|miVGOYj@a@v@QTYXQFw@FIA[KKUKBKMw@qAIOMe@MSWWMSm@cA[q@Sa@"
+        },
+        "summary": "Departures Dr",
+        "warnings": [
+            "Walking directions are in beta. Use caution \u2013 This route may be missing sidewalks or pedestrian paths."
+        ],
+        "waypoint_order": []
+    }
+]
