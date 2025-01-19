@@ -2,7 +2,10 @@ from django.shortcuts import render
 from rest_framework.response import Response
 
 # Create your views here.
-from rest_framework import viewsets
+from rest_framework import viewsets, mixins
+
+from core.models import LocationHistory
+from core.serializers import LocationHistorySerializer
 
 
 class AudioViewSet(viewsets.ViewSet):
@@ -18,6 +21,15 @@ class AudioViewSet(viewsets.ViewSet):
         print(request.headers)
 
         return Response({"audio": "audio created"})
+
+
+class LocationHistoryViewSet(
+    mixins.CreateModelMixin,
+    mixins.ListModelMixin,
+    viewsets.GenericViewSet,
+):
+    queryset = LocationHistory.objects.all()
+    serializer_class = LocationHistorySerializer
 
 
 class GPSViewSet(viewsets.ViewSet):
