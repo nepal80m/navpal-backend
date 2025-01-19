@@ -8,6 +8,8 @@ from core.models import LocationHistory
 from core.serializers import LocationHistorySerializer
 from core.models import AudioFile
 from openai import OpenAI
+from channels.layers import get_channel_layer
+from asgiref.sync import async_to_sync
 
 client = OpenAI()
 
@@ -23,13 +25,13 @@ class AudioViewSet(viewsets.ViewSet):
         uploaded_file = request.FILES["file"]
         AudioFile.objects.create(file=uploaded_file)
 
-        # print(uploaded_file)
-        # audio_file = uploaded_file
-        # transcription = client.audio.translations.create(
-        #     model="whisper-1",
-        #     file=audio_file,
-        # )
-        # print(transcription.text)
+        print(uploaded_file)
+        audio_file = uploaded_file
+        transcription = client.audio.translations.create(
+            model="whisper-1",
+            file=audio_file,
+        )
+        print(transcription.text)
 
         # print(request.data)
         # print(request.FILES)
@@ -46,6 +48,18 @@ class LocationHistoryViewSet(
 ):
     queryset = LocationHistory.objects.all()
     serializer_class = LocationHistorySerializer
+
+    def create(self, request, *args, **kwargs):
+        response = super().create(request, *args, **kwargs)
+        room_name = "room1"
+        file_path = "/Users/anepal/workspace/navpal-backend/audio_recording.m4a"
+        # Notify the WebSocket consumer
+        channel_layer = get_channel_layer()
+        async_to_sync(channel_layer.group_send)(
+            f"file_transfer_{room_name}",
+            {"type": "send_audio_file", "file_path": file_path},
+        )
+        return response
 
 
 class GPSViewSet(viewsets.ViewSet):
