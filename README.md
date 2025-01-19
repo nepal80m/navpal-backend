@@ -1,4 +1,14 @@
+# NavPal
 
+## Team Members
+
+* Anish Dulal
+* Errol Kaylor
+* Tina Majchrzakt
+* Asim Nepal
+* Eric Zander
+
+## Instructions to Use
 
 ## Frameworks and Dependencies
 

@@ -1,5 +1,5 @@
-# from openai import OpenAI
-# client = OpenAI()
+from openai import OpenAI
+client = OpenAI()
 
 audio_file= open("/Users/anishd/Documents/QuackUO/navpal/output_final.wav", "rb")
 # transcription = client.audio.transcriptions.create(
@@ -30,4 +30,5 @@ transcription = client.audio.translations.create(
 )
 
 print(transcription.text)
+print(transcription.language)
 
